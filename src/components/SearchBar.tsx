@@ -34,9 +34,9 @@ export default function SearchBar({
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-none focus:border-gray-900 focus:outline-none transition-colors font-serif text-gray-800 placeholder-gray-500"
+          className="w-full pl-10 sm:pl-12 pr-4 py-2 sm:py-3 md:py-4 text-sm sm:text-base md:text-lg border-2 border-gray-300 rounded-none focus:border-gray-900 focus:outline-none transition-colors font-serif text-gray-800 placeholder-gray-500"
         />
-        <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
+        <MagnifyingGlassIcon className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-gray-500" />
       </div>
     </form>
   );

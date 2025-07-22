@@ -97,15 +97,15 @@ export default function HomePageContent({
 
       {/* Hero Section */}
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900 mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 lg:py-20 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-900 mb-3 sm:mb-4 md:mb-6">
             Bienvenue sur mon journal
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto font-serif leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto font-serif leading-relaxed px-4">
             Une collection de pensées, d&apos;idées et d&apos;expériences sur la
             technologie, la vie et tout le reste.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center px-4">
             <SearchBar
               onSearch={handleSearch}
               placeholder="Rechercher des articles..."
@@ -116,30 +116,30 @@ export default function HomePageContent({
       </div>
 
       {/* Stats Section */}
-      <div className="bg-white py-8 border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-3 gap-8 text-center">
+      <div className="bg-white py-6 sm:py-8 md:py-10 border-b border-gray-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 text-center">
             <div>
-              <div className="text-2xl font-bold text-gray-900">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                 {posts.length + (featuredPost ? 1 : 0)}
               </div>
-              <div className="text-sm text-gray-600 uppercase tracking-wide">
+              <div className="text-xs sm:text-sm md:text-base text-gray-600 uppercase tracking-wide mt-1">
                 Articles
               </div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                 {categories.length}
               </div>
-              <div className="text-sm text-gray-600 uppercase tracking-wide">
+              <div className="text-xs sm:text-sm md:text-base text-gray-600 uppercase tracking-wide mt-1">
                 Catégories
               </div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
                 {authors.length}
               </div>
-              <div className="text-sm text-gray-600 uppercase tracking-wide">
+              <div className="text-xs sm:text-sm md:text-base text-gray-600 uppercase tracking-wide mt-1">
                 Auteurs
               </div>
             </div>
@@ -147,14 +147,14 @@ export default function HomePageContent({
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
         {/* Search Results Header */}
         {searchQuery && (
-          <div className="mb-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <div className="mb-6 sm:mb-8 md:mb-10 text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-2 px-4">
               Résultats de recherche pour &quot;{searchQuery}&quot;
             </h2>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600">
               {(featuredPost ? 1 : 0) + posts.length} article(s) trouvé(s)
             </p>
           </div>
@@ -162,12 +162,12 @@ export default function HomePageContent({
 
         {/* Featured Post Section */}
         {featuredPost && (
-          <section className="mb-16">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">
+          <section className="mb-12 sm:mb-14 md:mb-16">
+            <div className="text-center mb-6 sm:mb-8 md:mb-10">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 px-4">
                 {searchQuery ? "Meilleur résultat" : "À la une"}
               </h2>
-              <div className="w-20 h-1 bg-gray-900 mx-auto mt-4"></div>
+              <div className="w-16 sm:w-20 md:w-24 h-1 bg-gray-900 mx-auto mt-3 sm:mt-4"></div>
             </div>
             <FeaturedPost post={featuredPost} />
           </section>
@@ -176,14 +176,14 @@ export default function HomePageContent({
         {/* Main Content */}
         {posts.length > 0 ? (
           <section>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <div className="text-center mb-8 sm:mb-10 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
                 {searchQuery ? "Plus de résultats" : "Derniers articles"}
               </h2>
-              <div className="w-20 h-1 bg-gray-900 mx-auto"></div>
+              <div className="w-16 sm:w-20 md:w-24 h-1 bg-gray-900 mx-auto"></div>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12">
+            <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-10 md:mb-12">
               {posts.map((post: PostPreview) => (
                 <PostCard key={post._id} post={post} />
               ))}
@@ -201,15 +201,15 @@ export default function HomePageContent({
             )}
           </section>
         ) : (
-          <div className="text-center py-16">
+          <div className="text-center py-12 sm:py-14 md:py-16 px-4">
             {searchQuery && (
               <div>
-                <p className="text-gray-500 text-lg mb-4">
+                <p className="text-gray-500 text-base sm:text-lg md:text-xl mb-4 sm:mb-6">
                   Aucun article trouvé pour &quot;{searchQuery}&quot;.
                 </p>
                 <button
                   onClick={clearSearch}
-                  className="text-gray-900 hover:text-gray-700 font-medium underline"
+                  className="text-sm sm:text-base md:text-lg text-gray-900 hover:text-gray-700 font-medium underline transition-colors duration-200"
                 >
                   Effacer la recherche et afficher tous les articles
                 </button>

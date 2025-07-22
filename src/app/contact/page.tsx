@@ -15,48 +15,48 @@ export default async function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main className="max-w-6xl mx-auto px-6 py-16">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         {/* Section d'en-tête */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-light text-gray-900 mb-6 tracking-wide">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-900 mb-4 sm:mb-6 tracking-wide px-4">
             Contactez-nous
           </h1>
-          <div className="w-24 h-px bg-gray-900 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-serif">
+          <div className="w-16 sm:w-20 md:w-24 h-px bg-gray-900 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-serif px-4">
             Une question, une suggestion ou juste envie de dire bonjour ? Nous
             serions ravis d&apos;avoir de vos nouvelles. Envoyez-nous un message
             et nous vous répondrons dès que possible.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 sm:gap-10 md:gap-12 mb-16 sm:mb-18 md:mb-20">
           {/* Informations de contact */}
-          <div className="lg:col-span-2">
-            <div className="space-y-8">
+          <div className="lg:col-span-2 order-2 lg:order-1">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <h2 className="text-2xl font-serif font-light text-gray-900 mb-6 tracking-wide">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-light text-gray-900 mb-4 sm:mb-6 tracking-wide">
                   Informations de contact
                 </h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 mt-1 text-gray-700">
+                <div className="space-y-4 sm:space-y-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 mt-1 text-gray-700 flex-shrink-0">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-serif font-medium text-gray-900 mb-1">
+                      <h3 className="text-sm sm:text-base font-serif font-medium text-gray-900 mb-1">
                         E-mail
                       </h3>
-                      <p className="text-gray-600 font-serif">
+                      <p className="text-sm sm:text-base text-gray-600 font-serif">
                         contact@ramziblog.com
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 mt-1 text-gray-700">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 mt-1 text-gray-700 flex-shrink-0">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -66,17 +66,17 @@ export default async function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-serif font-medium text-gray-900 mb-1">
+                      <h3 className="text-sm sm:text-base font-serif font-medium text-gray-900 mb-1">
                         Localisation
                       </h3>
-                      <p className="text-gray-600 font-serif">
+                      <p className="text-sm sm:text-base text-gray-600 font-serif">
                         À distance & International
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 mt-1 text-gray-700">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
+                    <div className="w-5 h-5 sm:w-6 sm:h-6 mt-1 text-gray-700 flex-shrink-0">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -86,28 +86,30 @@ export default async function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-serif font-medium text-gray-900 mb-1">
+                      <h3 className="text-sm sm:text-base font-serif font-medium text-gray-900 mb-1">
                         Délai de réponse
                       </h3>
-                      <p className="text-gray-600 font-serif">Sous 24 heures</p>
+                      <p className="text-sm sm:text-base text-gray-600 font-serif">
+                        Sous 24 heures
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-gray-200">
-                <h3 className="text-lg font-serif font-medium text-gray-900 mb-4">
+              <div className="pt-4 sm:pt-6 border-t border-gray-200">
+                <h3 className="text-base sm:text-lg md:text-xl font-serif font-medium text-gray-900 mb-3 sm:mb-4">
                   Suivez-nous
                 </h3>
-                <div className="flex space-x-4">
+                <div className="flex space-x-3 sm:space-x-4">
                   <a
                     href="https://twitter.com/ramziblog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4 sm:w-5 sm:h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -118,10 +120,10 @@ export default async function ContactPage() {
                     href="https://linkedin.com/company/ramziblog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4 sm:w-5 sm:h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -132,10 +134,10 @@ export default async function ContactPage() {
                     href="https://github.com/ramziblog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
+                    className="w-10 h-10 sm:w-12 sm:h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className="w-4 h-4 sm:w-5 sm:h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -148,9 +150,9 @@ export default async function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-3">
-            <div className="bg-gray-50 border border-gray-200 p-8 rounded-sm">
-              <h2 className="text-2xl font-serif font-light text-gray-900 mb-6 tracking-wide">
+          <div className="lg:col-span-3 order-1 lg:order-2">
+            <div className="bg-gray-50 border border-gray-200 p-4 sm:p-6 md:p-8 rounded-sm">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-light text-gray-900 mb-4 sm:mb-6 tracking-wide">
                 Envoyez-nous un message
               </h2>
               <ContactForm />
@@ -159,47 +161,47 @@ export default async function ContactPage() {
         </div>
 
         {/* Section FAQ */}
-        <div className="border-t border-gray-200 pt-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900 mb-6 tracking-wide">
+        <div className="border-t border-gray-200 pt-12 sm:pt-14 md:pt-16">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-light text-gray-900 mb-4 sm:mb-6 tracking-wide px-4">
               Questions fréquemment posées
             </h2>
-            <div className="w-24 h-px bg-gray-900 mx-auto"></div>
+            <div className="w-16 sm:w-20 md:w-24 h-px bg-gray-900 mx-auto"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="border border-gray-200 p-6 sm:p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-base sm:text-lg md:text-xl font-serif font-medium text-gray-900 mb-2 sm:mb-3">
                 À quelle vitesse répondez-vous ?
               </h3>
-              <p className="text-gray-600 font-serif leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 font-serif leading-relaxed">
                 Nous répondons généralement à toutes les demandes sous 24 heures
                 les jours ouvrés.
               </p>
             </div>
-            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
+            <div className="border border-gray-200 p-6 sm:p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-base sm:text-lg md:text-xl font-serif font-medium text-gray-900 mb-2 sm:mb-3">
                 Puis-je suggérer des sujets d&apos;articles ?
               </h3>
-              <p className="text-gray-600 font-serif leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 font-serif leading-relaxed">
                 Bien s&apos;ûr ! Nous aimons recevoir des suggestions de sujets
                 de la part de nos lecteurs. Utilisez le formulaire de contact
                 ci-dessus.
               </p>
             </div>
-            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
+            <div className="border border-gray-200 p-6 sm:p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-base sm:text-lg md:text-xl font-serif font-medium text-gray-900 mb-2 sm:mb-3">
                 Acceptez-vous des articles invités ?
               </h3>
-              <p className="text-gray-600 font-serif leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 font-serif leading-relaxed">
                 Oui, nous acceptons les contributions invitées de qualité. Merci
                 d&apos;inclure votre proposition dans votre message.
               </p>
             </div>
-            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
+            <div className="border border-gray-200 p-6 sm:p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-base sm:text-lg md:text-xl font-serif font-medium text-gray-900 mb-2 sm:mb-3">
                 Support technique ?
               </h3>
-              <p className="text-gray-600 font-serif leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 font-serif leading-relaxed">
                 Pour tout problème technique avec le site, merci de décrire le
                 problème en détail lors de votre prise de contact.
               </p>

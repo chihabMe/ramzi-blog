@@ -67,12 +67,12 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
 
   return (
     <div className={className}>
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <div>
             <label
               htmlFor="name"
-              className="block text-sm font-serif font-medium text-gray-900 mb-2 tracking-wide"
+              className="block text-xs sm:text-sm font-serif font-medium text-gray-900 mb-1 sm:mb-2 tracking-wide"
             >
               Name *
             </label>
@@ -85,13 +85,13 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               required
               placeholder="Your full name"
               disabled={isSubmitting}
-              className="w-full px-4 py-3 border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200"
             />
           </div>
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-serif font-medium text-gray-900 mb-2 tracking-wide"
+              className="block text-xs sm:text-sm font-serif font-medium text-gray-900 mb-1 sm:mb-2 tracking-wide"
             >
               Email *
             </label>
@@ -104,7 +104,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               required
               placeholder="your.email@example.com"
               disabled={isSubmitting}
-              className="w-full px-4 py-3 border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200"
+              className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200"
             />
           </div>
         </div>
@@ -112,7 +112,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
         <div>
           <label
             htmlFor="subject"
-            className="block text-sm font-serif font-medium text-gray-900 mb-2 tracking-wide"
+            className="block text-xs sm:text-sm font-serif font-medium text-gray-900 mb-1 sm:mb-2 tracking-wide"
           >
             Subject *
           </label>
@@ -125,14 +125,14 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             required
             placeholder="What's this about?"
             disabled={isSubmitting}
-            className="w-full px-4 py-3 border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200"
+            className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200"
           />
         </div>
 
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-serif font-medium text-gray-900 mb-2 tracking-wide"
+            className="block text-xs sm:text-sm font-serif font-medium text-gray-900 mb-1 sm:mb-2 tracking-wide"
           >
             Message *
           </label>
@@ -142,16 +142,16 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             value={formData.message}
             onChange={handleInputChange}
             required
-            rows={8}
+            rows={6}
             placeholder="Tell us more about your inquiry..."
             disabled={isSubmitting}
-            className="w-full px-4 py-3 border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200 resize-vertical"
+            className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-none font-serif text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-gray-900 focus:ring-1 focus:ring-gray-900 disabled:bg-gray-100 disabled:cursor-not-allowed transition-colors duration-200 resize-vertical min-h-[120px] sm:min-h-[150px]"
           />
         </div>
 
         {submitStatus.type && (
           <div
-            className={`p-4 border ${
+            className={`p-3 sm:p-4 border text-sm sm:text-base ${
               submitStatus.type === "success"
                 ? "bg-green-50 text-green-800 border-green-200"
                 : "bg-red-50 text-red-800 border-red-200"
@@ -164,7 +164,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gray-900 text-white px-8 py-4 font-serif font-medium tracking-wide hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 border-2 border-gray-900 hover:border-gray-800"
+          className="w-full bg-gray-900 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-serif font-medium tracking-wide hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200 border-2 border-gray-900 hover:border-gray-800"
         >
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>

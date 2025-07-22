@@ -25,15 +25,15 @@ export default function Header() {
         <div className="block md:hidden border-t border-gray-200 pt-4">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="w-full flex items-center justify-center p-2 text-gray-700 hover:text-gray-900"
+            className="w-full flex items-center justify-center p-3 text-gray-700 hover:text-gray-900 transition-all duration-200 hover:bg-gray-50 rounded-lg group"
           >
-            <span className="text-sm font-serif uppercase tracking-widest mr-2">
+            <span className="text-sm font-serif uppercase tracking-widest mr-2 group-hover:tracking-wider transition-all duration-200">
               Menu
             </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`h-5 w-5 transition-transform duration-200 ${
-                isMenuOpen ? "transform rotate-180" : ""
+              className={`h-5 w-5 transition-all duration-300 ease-in-out ${
+                isMenuOpen ? "transform rotate-45 scale-110" : ""
               }`}
               fill="none"
               viewBox="0 0 24 24"
@@ -55,31 +55,54 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         <nav
-          className={`md:hidden ${
-            isMenuOpen ? "block" : "hidden"
-          } border-t border-gray-200 pt-4 pb-2`}
+          className={`md:hidden overflow-hidden border-t border-gray-200 transition-all duration-300 ease-in-out ${
+            isMenuOpen
+              ? "max-h-96 opacity-100 pt-4 pb-2"
+              : "max-h-0 opacity-0 pt-0 pb-0"
+          }`}
         >
           <ul className="flex flex-col items-center space-y-4 text-sm font-serif uppercase tracking-widest">
-            <li>
+            <li
+              className={`transform transition-all duration-300 delay-75 ${
+                isMenuOpen
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
+              }`}
+            >
               <Link
                 href="/"
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-700 hover:text-gray-900 transition-all duration-200 border-b border-transparent hover:border-gray-900 pb-1 hover:scale-105"
               >
                 Home
               </Link>
             </li>
-            <li>
+            <li
+              className={`transform transition-all duration-300 delay-100 ${
+                isMenuOpen
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
+              }`}
+            >
               <Link
                 href="/categories"
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-700 hover:text-gray-900 transition-all duration-200 border-b border-transparent hover:border-gray-900 pb-1 hover:scale-105"
               >
                 Categories
               </Link>
             </li>
-            <li>
+            <li
+              className={`transform transition-all duration-300 delay-125 ${
+                isMenuOpen
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-4 opacity-0"
+              }`}
+            >
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-700 hover:text-gray-900 transition-all duration-200 border-b border-transparent hover:border-gray-900 pb-1 hover:scale-105"
               >
                 Contact
               </Link>
@@ -93,7 +116,7 @@ export default function Header() {
             <li>
               <Link
                 href="/"
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+                className="text-gray-700 hover:text-gray-900 transition-all duration-200 border-b border-transparent hover:border-gray-900 pb-1 hover:scale-105 hover:tracking-wider"
               >
                 Home
               </Link>
@@ -101,7 +124,7 @@ export default function Header() {
             <li>
               <Link
                 href="/categories"
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+                className="text-gray-700 hover:text-gray-900 transition-all duration-200 border-b border-transparent hover:border-gray-900 pb-1 hover:scale-105 hover:tracking-wider"
               >
                 Categories
               </Link>
@@ -109,7 +132,7 @@ export default function Header() {
             <li>
               <Link
                 href="/archive"
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+                className="text-gray-700 hover:text-gray-900 transition-all duration-200 border-b border-transparent hover:border-gray-900 pb-1 hover:scale-105 hover:tracking-wider"
               >
                 Archive
               </Link>
@@ -117,7 +140,7 @@ export default function Header() {
             <li>
               <Link
                 href="/contact"
-                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+                className="text-gray-700 hover:text-gray-900 transition-all duration-200 border-b border-transparent hover:border-gray-900 pb-1 hover:scale-105 hover:tracking-wider"
               >
                 Contact
               </Link>
