@@ -3,7 +3,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us | Ramzi Blog",
-  description: "Get in touch with us. We'd love to hear from you!",
+  description: "Get in touch with us. We would love to hear from you!",
 };
 
 export default function ContactPage() {
@@ -14,9 +14,9 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a question, suggestion, or just want to say hello? We'd love to
-            hear from you. Send us a message and we'll get back to you as soon
-            as possible.
+            Have a question, suggestion, or just want to say hello? We&apos;d
+            love to hear from you. Send us a message and we&apos;ll get back to
+            you as soon as possible.
           </p>
         </div>
 

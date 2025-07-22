@@ -103,7 +103,7 @@ export async function PATCH(request: NextRequest) {
       );
     }
 
-    const updateData: any = {};
+    const updateData: { isRead?: boolean; status?: string } = {};
     if (typeof isRead === "boolean") updateData.isRead = isRead;
     if (status) updateData.status = status;
 

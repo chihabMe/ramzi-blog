@@ -20,7 +20,7 @@ function ContactMessage({ message, onUpdate }: ContactMessageProps) {
   ) => {
     setIsUpdating(true);
     try {
-      const updates: any = {};
+      const updates: { isRead?: boolean; status?: Contact["status"] } = {};
       if (typeof isRead === "boolean") updates.isRead = isRead;
       if (status) updates.status = status;
 
