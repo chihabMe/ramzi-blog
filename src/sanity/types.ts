@@ -74,3 +74,22 @@ export interface Newsletter {
   isActive: boolean;
   source: "website" | "blog_post" | "social_media" | "direct";
 }
+
+export interface Contact {
+  _id: string;
+  _type: "contact";
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  isRead: boolean;
+  submittedAt: string;
+  status: "new" | "in-progress" | "replied" | "closed";
+}
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}

@@ -108,3 +108,35 @@ export const newsletterByEmailQuery = `*[_type == "newsletter" && email == $emai
   isActive,
   subscribedAt
 }`;
+
+// Contact queries
+export const contactMessagesQuery = `*[_type == "contact"] | order(submittedAt desc) {
+  _id,
+  name,
+  email,
+  subject,
+  message,
+  isRead,
+  submittedAt,
+  status
+}`;
+
+export const contactMessageByIdQuery = `*[_type == "contact" && _id == $id][0] {
+  _id,
+  name,
+  email,
+  subject,
+  message,
+  isRead,
+  submittedAt,
+  status
+}`;
+
+export const unreadContactMessagesQuery = `*[_type == "contact" && isRead == false] | order(submittedAt desc) {
+  _id,
+  name,
+  email,
+  subject,
+  submittedAt,
+  status
+}`;
