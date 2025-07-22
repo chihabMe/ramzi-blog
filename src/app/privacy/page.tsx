@@ -46,24 +46,25 @@ export default function PrivacyPage() {
           </p>
           <ul>
             <li>
-              <strong>Données d'identité</strong> : inclut le prénom, le nom de
-              famille, le nom d'utilisateur ou identifiant similaire.
+              <strong>Données d&apos;identité</strong> : inclut le prénom, le
+              nom de famille, le nom d&apos;utilisateur ou identifiant
+              similaire.
             </li>
             <li>
-              <strong>Données de contact</strong> : inclut l'adresse e-mail et
-              les numéros de téléphone.
+              <strong>Données de contact</strong> : inclut l&apos;adresse e-mail
+              et les numéros de téléphone.
             </li>
             <li>
-              <strong>Données techniques</strong> : inclut l'adresse IP, les
-              données de connexion, le type et la version du navigateur, le
-              fuseau horaire et l'emplacement, les types et versions de plug-ins
-              de navigateur, le système d'exploitation et la plateforme, et
-              d'autres technologies sur les appareils que vous utilisez pour
-              accéder à ce site web.
+              <strong>Données techniques</strong> : inclut l&apos;adresse IP,
+              les données de connexion, le type et la version du navigateur, le
+              fuseau horaire et l&apos;emplacement, les types et versions de
+              plug-ins de navigateur, le système d&apos;exploitation et la
+              plateforme, et d&apos;autres technologies sur les appareils que
+              vous utilisez pour accéder à ce site web.
             </li>
             <li>
-              <strong>Données d'utilisation</strong> : inclut des informations
-              sur la façon dont vous utilisez notre site web.
+              <strong>Données d&apos;utilisation</strong> : inclut des
+              informations sur la façon dont vous utilisez notre site web.
             </li>
           </ul>
 
@@ -79,7 +80,7 @@ export default function PrivacyPage() {
               Pour répondre à vos demandes via notre formulaire de contact.
             </li>
             <li>Pour améliorer notre site web et assurer sa sécurité.</li>
-            <li>Pour mesurer l'efficacité de notre contenu.</li>
+            <li>Pour mesurer l&apos;efficacité de notre contenu.</li>
           </ul>
 
           <h2>Conservation des Données</h2>
@@ -94,9 +95,9 @@ export default function PrivacyPage() {
           <p>
             Dans certaines circonstances, vous avez des droits en vertu des lois
             sur la protection des données concernant vos données personnelles,
-            notamment le droit d'accès, de rectification, d'effacement,
-            d'opposition au traitement, de portabilité des données et de retrait
-            du consentement.
+            notamment le droit d&apos;accès, de rectification,
+            d&apos;effacement, d&apos;opposition au traitement, de portabilité
+            des données et de retrait du consentement.
           </p>
 
           <h2>Cookies</h2>
@@ -104,7 +105,7 @@ export default function PrivacyPage() {
             Notre site peut utiliser des cookies pour distinguer les
             utilisateurs de notre site web. Cela nous aide à vous offrir une
             bonne expérience lorsque vous naviguez sur notre site web et nous
-            permet également d'améliorer notre site.
+            permet également d&apos;améliorer notre site.
           </p>
 
           <h2>Modifications de la Politique de Confidentialité</h2>
@@ -132,7 +133,7 @@ export default function PrivacyPage() {
             href="/"
             className="inline-flex items-center text-gray-700 hover:text-gray-900 font-serif transition-colors duration-200"
           >
-            ← Retour à l&apos;accueil
+            &larr; Retour à l&apos;accueil
           </Link>
         </div>
       </div>
