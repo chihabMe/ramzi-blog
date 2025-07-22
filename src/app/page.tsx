@@ -1,14 +1,11 @@
 import HomePageContent from "@/components/HomePageContent";
 import {
-  getPosts,
   getCategories,
-  getAuthors,
   getPostsPaginated,
   searchPosts,
   type PostPreview,
-  type Category,
-  type Author,
 } from "@/sanity";
+import { getAuthors } from "@/sanity/utils";
 
 const POSTS_PER_PAGE = 6;
 

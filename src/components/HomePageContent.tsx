@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   searchPosts,
@@ -9,12 +9,10 @@ import {
   type Author,
 } from "@/sanity";
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
 import SearchBar from "@/components/SearchBar";
 import FeaturedPost from "@/components/FeaturedPost";
 import PostCard from "@/components/PostCard";
 import Pagination from "@/components/Pagination";
-import StatsSection from "@/components/StatsSection";
 import CategoriesSection from "./CategoriesSection";
 import NewsletterSection from "./NewsletterSection";
 import Footer from "./Footer";
@@ -43,7 +41,6 @@ export default function HomePageContent({
     initialFeaturedPost
   );
   const [searchQuery, setSearchQuery] = useState(initialSearchQuery);
-  const [isSearching, setIsSearching] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -56,7 +53,6 @@ export default function HomePageContent({
     }
 
     try {
-      setIsSearching(true);
       setSearchQuery(query);
 
       // Update URL with search parameter
@@ -76,8 +72,6 @@ export default function HomePageContent({
       }
     } catch (error) {
       console.error("Error searching posts:", error);
-    } finally {
-      setIsSearching(false);
     }
   };
 
@@ -158,7 +152,7 @@ export default function HomePageContent({
         {searchQuery && (
           <div className="mb-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Search Results for "{searchQuery}"
+              Search Results for &quot;{searchQuery}&quot;
             </h2>
             <p className="text-gray-600">
               Found {(featuredPost ? 1 : 0) + posts.length} article(s)
@@ -211,7 +205,7 @@ export default function HomePageContent({
             {searchQuery && (
               <div>
                 <p className="text-gray-500 text-lg mb-4">
-                  No posts found for "{searchQuery}".
+                  No posts found for &quot;{searchQuery}&quot;.
                 </p>
                 <button
                   onClick={clearSearch}

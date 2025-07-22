@@ -40,7 +40,7 @@ export default function NewsletterSection() {
       if (result.success) {
         setEmail("");
       }
-    } catch (error) {
+    } catch {
       setMessage("Something went wrong. Please try again.");
       setIsSuccess(false);
     } finally {

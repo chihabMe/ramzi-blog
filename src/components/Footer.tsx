@@ -11,7 +11,7 @@ export default function Footer({ categories }: FooterProps) {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Ramzi's Blog</h3>
+            <h3 className="text-xl font-bold mb-4">Ramzi&apos;s Blog</h3>
             <p className="text-gray-400">
               Sharing thoughts, ideas, and experiences about technology and
               life.
@@ -55,7 +55,7 @@ export default function Footer({ categories }: FooterProps) {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            © 2025 Ramzi's Blog. Powered by{" "}
+            © 2025 Ramzi&apos;s Blog. Powered by{" "}
             <a
               href="https://nextjs.org"
               target="_blank"

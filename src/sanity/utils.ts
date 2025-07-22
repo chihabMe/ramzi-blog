@@ -158,7 +158,7 @@ export async function getPostsPaginated(
 
 // Utility function to get image URL from Sanity
 export function getImageUrl(
-  source: any,
+  source: { asset?: { _ref?: string } },
   width?: number,
   height?: number
 ): string {
