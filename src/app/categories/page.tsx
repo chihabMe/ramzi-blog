@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "@/components/Header";
-import { getCategories, type Category } from "@/sanity";
+import { getCategories } from "@/sanity";
 
 // Generate metadata for the page
 export async function generateMetadata() {
@@ -91,7 +91,7 @@ export default async function CategoriesPage() {
                   No categories found
                 </h3>
                 <p className="text-gray-600">
-                  Categories haven't been set up yet. Check back later!
+                  Categories haven&apos;t been set up yet. Check back later!
                 </p>
               </div>
             </div>

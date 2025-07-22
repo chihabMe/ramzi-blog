@@ -1,51 +1,62 @@
 import { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { getCategories } from "@/sanity";
 
 export const metadata: Metadata = {
   title: "Contact Us | Ramzi Blog",
   description: "Get in touch with us. We would love to hear from you!",
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const categories = await getCategories();
+
   return (
-    <main className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-white">
+      <Header />
+      <main className="max-w-6xl mx-auto px-6 py-16">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-serif font-light text-gray-900 mb-6 tracking-wide">
+            Get in Touch
+          </h1>
+          <div className="w-24 h-px bg-gray-900 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-serif">
             Have a question, suggestion, or just want to say hello? We&apos;d
             love to hear from you. Send us a message and we&apos;ll get back to
             you as soon as possible.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-20">
           {/* Contact Information */}
-          <div className="lg:col-span-1">
-            <div className="space-y-6">
+          <div className="lg:col-span-2">
+            <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-semibold mb-4">
+                <h2 className="text-2xl font-serif font-light text-gray-900 mb-6 tracking-wide">
                   Contact Information
                 </h2>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 mt-0.5 text-primary">
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 mt-1 text-gray-700">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">
+                      <h3 className="font-serif font-medium text-gray-900 mb-1">
+                        Email
+                      </h3>
+                      <p className="text-gray-600 font-serif">
                         contact@ramziblog.com
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 mt-0.5 text-primary">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 mt-1 text-gray-700">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -55,13 +66,17 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-medium">Location</h3>
-                      <p className="text-muted-foreground">Remote & Global</p>
+                      <h3 className="font-serif font-medium text-gray-900 mb-1">
+                        Location
+                      </h3>
+                      <p className="text-gray-600 font-serif">
+                        Remote & Global
+                      </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-3">
-                    <div className="w-5 h-5 mt-0.5 text-primary">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-6 h-6 mt-1 text-gray-700">
                       <svg fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -71,21 +86,27 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-medium">Response Time</h3>
-                      <p className="text-muted-foreground">Within 24 hours</p>
+                      <h3 className="font-serif font-medium text-gray-900 mb-1">
+                        Response Time
+                      </h3>
+                      <p className="text-gray-600 font-serif">
+                        Within 24 hours
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-lg font-medium mb-3">Follow Us</h3>
+              <div className="pt-6 border-t border-gray-200">
+                <h3 className="text-lg font-serif font-medium text-gray-900 mb-4">
+                  Follow Us
+                </h3>
                 <div className="flex space-x-4">
                   <a
                     href="https://twitter.com/ramziblog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
+                    className="w-12 h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
                   >
                     <svg
                       className="w-5 h-5"
@@ -99,7 +120,7 @@ export default function ContactPage() {
                     href="https://linkedin.com/company/ramziblog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
+                    className="w-12 h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
                   >
                     <svg
                       className="w-5 h-5"
@@ -113,7 +134,7 @@ export default function ContactPage() {
                     href="https://github.com/ramziblog"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary/20 transition-colors"
+                    className="w-12 h-12 border-2 border-gray-200 rounded-full flex items-center justify-center hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300"
                   >
                     <svg
                       className="w-5 h-5"
@@ -129,50 +150,65 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <ContactForm />
+          <div className="lg:col-span-3">
+            <div className="bg-gray-50 border border-gray-200 p-8 rounded-sm">
+              <h2 className="text-2xl font-serif font-light text-gray-900 mb-6 tracking-wide">
+                Send us a Message
+              </h2>
+              <ContactForm />
+            </div>
           </div>
         </div>
 
         {/* FAQ Section */}
-        <div className="mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Frequently Asked Questions
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold mb-2">
+        <div className="border-t border-gray-200 pt-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900 mb-6 tracking-wide">
+              Frequently Asked Questions
+            </h2>
+            <div className="w-24 h-px bg-gray-900 mx-auto"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
                 How quickly do you respond?
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600 font-serif leading-relaxed">
                 We typically respond to all inquiries within 24 hours during
                 business days.
               </p>
             </div>
-            <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold mb-2">Can I suggest blog topics?</h3>
-              <p className="text-muted-foreground">
+            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
+                Can I suggest blog topics?
+              </h3>
+              <p className="text-gray-600 font-serif leading-relaxed">
                 Absolutely! We love hearing topic suggestions from our readers.
                 Use the contact form above.
               </p>
             </div>
-            <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold mb-2">Do you accept guest posts?</h3>
-              <p className="text-muted-foreground">
+            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
+                Do you accept guest posts?
+              </h3>
+              <p className="text-gray-600 font-serif leading-relaxed">
                 Yes, we welcome high-quality guest contributions. Please include
                 your proposal in your message.
               </p>
             </div>
-            <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold mb-2">Technical support?</h3>
-              <p className="text-muted-foreground">
+            <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
+              <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
+                Technical support?
+              </h3>
+              <p className="text-gray-600 font-serif leading-relaxed">
                 For technical issues with the website, please describe the
                 problem in detail when contacting us.
               </p>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer categories={categories} />
+    </div>
   );
 }

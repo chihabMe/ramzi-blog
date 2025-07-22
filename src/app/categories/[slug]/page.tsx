@@ -1,12 +1,8 @@
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
+import Link from "next/link";
 import PostCard from "@/components/PostCard";
-import {
-  getPostsByCategorySlug,
-  getCategoryBySlug,
-  type Category,
-  type PostPreview,
-} from "@/sanity";
+import { getPostsByCategorySlug, getCategoryBySlug } from "@/sanity";
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
@@ -103,8 +99,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                   No posts found
                 </h3>
                 <p className="text-gray-600">
-                  There are no posts in the "{category.title}" category yet.
-                  Check back later for new content!
+                  There are no posts in the &quot;{category.title}&quot;
+                  category yet. Check back later for new content!
                 </p>
               </div>
             </div>
@@ -113,12 +109,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
         {/* Back to all posts link */}
         <div className="text-center mt-16">
-          <a
+          <Link
             href="/"
             className="inline-flex items-center text-gray-700 hover:text-gray-900 font-serif transition-colors duration-200"
           >
             ← Back to all posts
-          </a>
+          </Link>
         </div>
       </div>
     </div>
