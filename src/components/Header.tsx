@@ -30,6 +30,14 @@ export default function Header() {
             </li>
             <li>
               <Link
+                href="/categories"
+                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
+              >
+                Categories
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/about"
                 className="text-gray-700 hover:text-gray-900 transition-colors duration-200 border-b border-transparent hover:border-gray-900 pb-1"
               >

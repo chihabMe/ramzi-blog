@@ -28,12 +28,13 @@ export default function PostCard({ post }: PostCardProps) {
         {post.categories && post.categories.length > 0 && (
           <div className="flex items-center gap-2 mb-3">
             {post.categories.slice(0, 1).map((category) => (
-              <span
-                key={category.title}
-                className="text-xs font-medium text-gray-600 uppercase tracking-wider"
+              <Link
+                key={category._id}
+                href={`/categories/${category.slug.current}`}
+                className="text-xs font-medium text-gray-600 uppercase tracking-wider hover:text-blue-600 transition-colors"
               >
                 {category.title}
-              </span>
+              </Link>
             ))}
           </div>
         )}

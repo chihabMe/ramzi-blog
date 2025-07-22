@@ -11,7 +11,9 @@ export const postsQuery = `*[_type == "post"] | order(publishedAt desc) {
   },
   mainImage,
   categories[]->{
-    title
+    _id,
+    title,
+    slug
   },
   publishedAt,
   "excerpt": array::join(string::split((pt::text(body))[0..255], "")[0..255], "") + "..."
@@ -55,6 +57,7 @@ export const authorsQuery = `*[_type == "author"] {
 export const categoriesQuery = `*[_type == "category"] {
   _id,
   title,
+  slug,
   description
 }`;
 
@@ -69,7 +72,27 @@ export const postsByCategoryQuery = `*[_type == "post" && $categoryId in categor
   },
   mainImage,
   categories[]->{
+    _id,
     title
+  },
+  publishedAt,
+  "excerpt": array::join(string::split((pt::text(body))[0..255], "")[0..255], "") + "..."
+}`;
+
+// Get posts by category slug
+export const postsByCategorySlugQuery = `*[_type == "post" && $categorySlug in categories[]->slug.current] | order(publishedAt desc) {
+  _id,
+  title,
+  slug,
+  author->{
+    name,
+    slug
+  },
+  mainImage,
+  categories[]->{
+    _id,
+    title,
+    slug
   },
   publishedAt,
   "excerpt": array::join(string::split((pt::text(body))[0..255], "")[0..255], "") + "..."
@@ -86,7 +109,9 @@ export const postsByAuthorQuery = `*[_type == "post" && author._ref == $authorId
   },
   mainImage,
   categories[]->{
-    title
+    _id,
+    title,
+    slug
   },
   publishedAt,
   "excerpt": array::join(string::split((pt::text(body))[0..255], "")[0..255], "") + "..."

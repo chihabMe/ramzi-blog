@@ -6,6 +6,7 @@ import {
   authorsQuery,
   categoriesQuery,
   postsByCategoryQuery,
+  postsByCategorySlugQuery,
   postsByAuthorQuery,
   newsletterSubscribersQuery,
   newsletterByEmailQuery,
@@ -62,6 +63,24 @@ export async function getCategories(): Promise<Category[]> {
   }
 }
 
+// Fetch a single category by slug
+export async function getCategoryBySlug(
+  slug: string
+): Promise<Category | null> {
+  try {
+    const categoryQuery = `*[_type == "category" && slug.current == $slug][0] {
+      _id,
+      title,
+      slug,
+      description
+    }`;
+    return await client.fetch(categoryQuery, { slug });
+  } catch (error) {
+    console.error("Error fetching category by slug:", error);
+    return null;
+  }
+}
+
 // Fetch posts by category
 export async function getPostsByCategory(
   categoryId: string
@@ -70,6 +89,18 @@ export async function getPostsByCategory(
     return await client.fetch(postsByCategoryQuery, { categoryId });
   } catch (error) {
     console.error("Error fetching posts by category:", error);
+    return [];
+  }
+}
+
+// Fetch posts by category slug
+export async function getPostsByCategorySlug(
+  categorySlug: string
+): Promise<PostPreview[]> {
+  try {
+    return await client.fetch(postsByCategorySlugQuery, { categorySlug });
+  } catch (error) {
+    console.error("Error fetching posts by category slug:", error);
     return [];
   }
 }
@@ -100,7 +131,9 @@ export async function searchPosts(query: string): Promise<PostPreview[]> {
       },
       mainImage,
       categories[]->{
-        title
+        _id,
+        title,
+        slug
       },
       publishedAt,
       "excerpt": array::join(string::split((pt::text(body))[0..255], "")[0..255], "") + "..."
@@ -136,7 +169,9 @@ export async function getPostsPaginated(
         },
         mainImage,
         categories[]->{
-          title
+          _id,
+          title,
+          slug
         },
         publishedAt,
         "excerpt": array::join(string::split((pt::text(body))[0..255], "")[0..255], "") + "..."

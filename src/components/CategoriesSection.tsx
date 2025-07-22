@@ -17,7 +17,7 @@ export default function CategoriesSection({
         {categories.map((category) => (
           <Link
             key={category._id}
-            href={`/categories/${category.title.toLowerCase()}`}
+            href={`/categories/${category.slug.current}`}
             className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-blue-100 hover:text-blue-700 transition-colors"
           >
             {category.title}

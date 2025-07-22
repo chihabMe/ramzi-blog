@@ -21,6 +21,9 @@ export interface Category {
   _id: string;
   _type: "category";
   title: string;
+  slug: {
+    current: string;
+  };
   description?: string;
 }
 
@@ -60,7 +63,11 @@ export interface PostPreview {
     };
   };
   categories?: {
+    _id: string;
     title: string;
+    slug: {
+      current: string;
+    };
   }[];
   publishedAt: string;
   excerpt?: string;
