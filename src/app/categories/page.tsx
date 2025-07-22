@@ -21,11 +21,11 @@ export default async function CategoriesPage() {
         {/* Page Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-serif font-light text-gray-900 mb-4">
-            Categories
+            Catégories
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore our content by topic. Click on any category to see related
-            posts.
+            Explorez notre contenu par sujet. Cliquez sur une catégorie pour
+            voir les articles associés.
           </p>
         </div>
 
@@ -88,10 +88,11 @@ export default async function CategoriesPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  No categories found
+                  Aucune catégorie trouvée
                 </h3>
                 <p className="text-gray-600">
-                  Categories haven&apos;t been set up yet. Check back later!
+                  Les catégories n&apos;ont pas encore été configurées. Revenez
+                  plus tard !
                 </p>
               </div>
             </div>
@@ -104,7 +105,7 @@ export default async function CategoriesPage() {
             href="/"
             className="inline-flex items-center text-gray-700 hover:text-gray-900 font-serif transition-colors duration-200"
           >
-            ← Back to home
+            ← Retour à l&apos;accueil
           </Link>
         </div>
       </div>

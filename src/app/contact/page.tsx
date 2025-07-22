@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 import { getCategories } from "@/sanity";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Ramzi Blog",
-  description: "Get in touch with us. We would love to hear from you!",
+  title: "Contact | Ramzi Blog",
+  description: "Contactez-nous. Nous serions ravis d'avoir de vos nouvelles !",
 };
 
 export default async function ContactPage() {
@@ -16,26 +16,26 @@ export default async function ContactPage() {
     <div className="min-h-screen bg-white">
       <Header />
       <main className="max-w-6xl mx-auto px-6 py-16">
-        {/* Header Section */}
+        {/* Section d'en-tête */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-serif font-light text-gray-900 mb-6 tracking-wide">
-            Get in Touch
+            Contactez-nous
           </h1>
           <div className="w-24 h-px bg-gray-900 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-serif">
-            Have a question, suggestion, or just want to say hello? We&apos;d
-            love to hear from you. Send us a message and we&apos;ll get back to
-            you as soon as possible.
+            Une question, une suggestion ou juste envie de dire bonjour ? Nous
+            serions ravis d&apos;avoir de vos nouvelles. Envoyez-nous un message
+            et nous vous répondrons dès que possible.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-20">
-          {/* Contact Information */}
+          {/* Informations de contact */}
           <div className="lg:col-span-2">
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl font-serif font-light text-gray-900 mb-6 tracking-wide">
-                  Contact Information
+                  Informations de contact
                 </h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
@@ -47,7 +47,7 @@ export default async function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-serif font-medium text-gray-900 mb-1">
-                        Email
+                        E-mail
                       </h3>
                       <p className="text-gray-600 font-serif">
                         contact@ramziblog.com
@@ -67,10 +67,10 @@ export default async function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-serif font-medium text-gray-900 mb-1">
-                        Location
+                        Localisation
                       </h3>
                       <p className="text-gray-600 font-serif">
-                        Remote & Global
+                        À distance & International
                       </p>
                     </div>
                   </div>
@@ -87,11 +87,9 @@ export default async function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-serif font-medium text-gray-900 mb-1">
-                        Response Time
+                        Délai de réponse
                       </h3>
-                      <p className="text-gray-600 font-serif">
-                        Within 24 hours
-                      </p>
+                      <p className="text-gray-600 font-serif">Sous 24 heures</p>
                     </div>
                   </div>
                 </div>
@@ -99,7 +97,7 @@ export default async function ContactPage() {
 
               <div className="pt-6 border-t border-gray-200">
                 <h3 className="text-lg font-serif font-medium text-gray-900 mb-4">
-                  Follow Us
+                  Suivez-nous
                 </h3>
                 <div className="flex space-x-4">
                   <a
@@ -153,56 +151,57 @@ export default async function ContactPage() {
           <div className="lg:col-span-3">
             <div className="bg-gray-50 border border-gray-200 p-8 rounded-sm">
               <h2 className="text-2xl font-serif font-light text-gray-900 mb-6 tracking-wide">
-                Send us a Message
+                Envoyez-nous un message
               </h2>
               <ContactForm />
             </div>
           </div>
         </div>
 
-        {/* FAQ Section */}
+        {/* Section FAQ */}
         <div className="border-t border-gray-200 pt-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900 mb-6 tracking-wide">
-              Frequently Asked Questions
+              Questions fréquemment posées
             </h2>
             <div className="w-24 h-px bg-gray-900 mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
               <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
-                How quickly do you respond?
+                À quelle vitesse répondez-vous ?
               </h3>
               <p className="text-gray-600 font-serif leading-relaxed">
-                We typically respond to all inquiries within 24 hours during
-                business days.
+                Nous répondons généralement à toutes les demandes sous 24 heures
+                les jours ouvrés.
               </p>
             </div>
             <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
               <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
-                Can I suggest blog topics?
+                Puis-je suggérer des sujets d&apos;articles ?
               </h3>
               <p className="text-gray-600 font-serif leading-relaxed">
-                Absolutely! We love hearing topic suggestions from our readers.
-                Use the contact form above.
+                Bien s&apos;ûr ! Nous aimons recevoir des suggestions de sujets
+                de la part de nos lecteurs. Utilisez le formulaire de contact
+                ci-dessus.
               </p>
             </div>
             <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
               <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
-                Do you accept guest posts?
+                Acceptez-vous des articles invités ?
               </h3>
               <p className="text-gray-600 font-serif leading-relaxed">
-                Yes, we welcome high-quality guest contributions. Please include
-                your proposal in your message.
+                Oui, nous acceptons les contributions invitées de qualité. Merci
+                d&apos;inclure votre proposition dans votre message.
               </p>
             </div>
             <div className="border border-gray-200 p-8 bg-white hover:shadow-lg transition-shadow duration-300">
               <h3 className="font-serif font-medium text-gray-900 mb-3 text-lg">
-                Technical support?
+                Support technique ?
               </h3>
               <p className="text-gray-600 font-serif leading-relaxed">
-                For technical issues with the website, please describe the
-                problem in detail when contacting us.
+                Pour tout problème technique avec le site, merci de décrire le
+                problème en détail lors de votre prise de contact.
               </p>
             </div>
           </div>
