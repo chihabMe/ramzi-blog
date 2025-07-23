@@ -28,7 +28,7 @@ export default async function PostPage({ params }: PostPageProps) {
       {/* Header */}
       <Header />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         {/* Back to blog link */}
         <Link
           href="/"

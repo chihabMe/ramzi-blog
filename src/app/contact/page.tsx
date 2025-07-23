@@ -15,7 +15,7 @@ export default async function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+      <main className="max-w-6xl mx-auto px-1 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
         {/* Section d'en-tête */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-light text-gray-900 mb-4 sm:mb-6 tracking-wide px-4">
